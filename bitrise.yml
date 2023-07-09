@@ -43,10 +43,10 @@ workflows:
       Next steps:
       - Check out [Getting started with Android apps](https://devcenter.bitrise.io/en/getting-started/getting-started-with-android-apps.html).
     steps:
+      - git-clone@8: {}
       - set-java-version@1:
           inputs:
             - set_java_version: "17"
-      - git-clone@8: {}
       - install-missing-android-tools@3:
           inputs:
             - gradlew_path: $PROJECT_LOCATION/gradlew
