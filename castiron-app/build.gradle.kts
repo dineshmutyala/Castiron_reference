@@ -4,6 +4,7 @@ plugins {
     id (Plugins.ANDROID_APP)
     id (Plugins.KOTLIN_ANDROID)
     id (Plugins.CAST_IRON_PLUGIN)
+    id("com.google.gms.google-services")
 }
 
 dependencies {
@@ -17,6 +18,9 @@ dependencies {
     implementation (Dependencies.AndroidX.Compose.MATERIAL.MATERIAL3)
     debugImplementation (Dependencies.AndroidX.Compose.UI.TOOLING)
     debugImplementation (Dependencies.AndroidX.Compose.UI.TOOLING_PREVIEW)
+
+    implementation(platform(Dependencies.Firebase.BOM))
+    implementation(Dependencies.Firebase.AUTH)
 
     testImplementation (Dependencies.Testing.JUNIT4)
     androidTestImplementation (Dependencies.Testing.JUNIT4_ANDROID_EXT)

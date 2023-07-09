@@ -11,6 +11,10 @@ object Dependencies {
             }
         }
 
+        object Firebase {
+            const val BOM = "32.1.1"
+        }
+
         object Kotlin {
             const val BOM = "1.8.22"
         }
@@ -42,6 +46,13 @@ object Dependencies {
                 const val TOOLING_PREVIEW = "$UI:ui-tooling-preview"
             }
         }
+    }
+
+    object Firebase {
+        private const val ROOT = "com.google.firebase"
+
+        const val BOM = "$ROOT:firebase-bom:${Versions.Firebase.BOM}"
+        const val AUTH = "$ROOT:firebase-auth-ktx"
     }
 
     object Kotlin {
