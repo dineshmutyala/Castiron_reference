@@ -1,4 +1,3 @@
-import com.dinesh.castiron.gradle.Config
 import com.dinesh.castiron.gradle.Dependencies
 
 plugins {
@@ -17,8 +16,6 @@ dependencies {
     implementation (Dependencies.AndroidX.Compose.MATERIAL.MATERIAL3)
     debugImplementation (Dependencies.AndroidX.Compose.UI.TOOLING)
     debugImplementation (Dependencies.AndroidX.Compose.UI.TOOLING_PREVIEW)
-
-    implementation(project(Config.Modules.UI_THEME))
 
     testImplementation(Dependencies.Testing.JUNIT4)
     androidTestImplementation(Dependencies.Testing.JUNIT4_ANDROID_EXT)

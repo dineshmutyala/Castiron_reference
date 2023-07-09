@@ -20,5 +20,6 @@ rootProject.name = "CastIron"
 
 include(
     ":castiron-app",
-    ":castiron-ui-components"
+    ":castiron-ui-components",
+    ":castiron-ui-theme"
 )

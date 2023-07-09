@@ -1,10 +1,11 @@
+import com.dinesh.castiron.gradle.Config
 import com.dinesh.castiron.gradle.Dependencies
 
 plugins {
     id (Plugins.ANDROID_APP)
     id (Plugins.KOTLIN_ANDROID)
     id (Plugins.CAST_IRON_PLUGIN)
-    id("com.google.gms.google-services")
+    id(Plugins.GOOGLE_SERVICES)
 }
 
 dependencies {
@@ -21,6 +22,9 @@ dependencies {
 
     implementation(platform(Dependencies.Firebase.BOM))
     implementation(Dependencies.Firebase.AUTH)
+
+    implementation(project(Config.Modules.UI_COMPONENTS))
+    implementation(project(Config.Modules.UI_THEME))
 
     testImplementation (Dependencies.Testing.JUNIT4)
     androidTestImplementation (Dependencies.Testing.JUNIT4_ANDROID_EXT)

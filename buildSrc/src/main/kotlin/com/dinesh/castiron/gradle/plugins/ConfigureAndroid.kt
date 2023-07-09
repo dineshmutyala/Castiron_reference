@@ -21,6 +21,10 @@ fun Project.configureAndroid() {
 
 private fun Project.configureAndroidCommon() {
     configure<BaseExtension> {
+        namespace = Config.Modules.getNamespace(name)
+
+        println("Configured module $name with namespace $namespace")
+
         defaultConfig {
             minSdk = Config.SDK.MIN_SDK_VERSION
             targetSdk = Config.SDK.SDK_VERSION
@@ -49,8 +53,6 @@ private fun Project.configureAndroidCommon() {
 
 private fun Project.configureAndroidApp() {
     configure<BaseAppModuleExtension> {
-        namespace = Config.App.NAMESPACE
-
         compileSdk = Config.SDK.SDK_VERSION
 
         defaultConfig {
@@ -63,7 +65,6 @@ private fun Project.configureAndroidApp() {
 
 private fun Project.configureAndroidLibrary() {
     configure<LibraryExtension> {
-        namespace = "${Config.ROOT_NAMESPACE}.${name.replace("-", ".")}"
 
         compileSdk = Config.SDK.SDK_VERSION
 
