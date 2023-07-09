@@ -19,5 +19,6 @@ dependencyResolutionManagement {
 rootProject.name = "CastIron"
 
 include(
-    ":castiron-app"
+    ":castiron-app",
+    ":castiron-ui-components"
 )

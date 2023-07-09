@@ -1,6 +1,8 @@
 package com.dinesh.castiron.gradle
 
-class Config {
+object Config {
+    const val ROOT_NAMESPACE = "com.dinesh"
+
     object App {
         const val APPLICATION_ID = "com.dinesh.castiron"
         const val NAMESPACE = APPLICATION_ID
