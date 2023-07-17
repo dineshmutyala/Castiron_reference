@@ -11,7 +11,7 @@ dependencies {
 
     implementation (platform(Dependencies.Kotlin.BOM))
 
-    implementation (Dependencies.AndroidX.CORE)
+    implementation (Dependencies.AndroidX.Core.KTX)
 
     implementation (platform(Dependencies.AndroidX.Compose.BOM))
     implementation (Dependencies.AndroidX.Compose.MATERIAL.MATERIAL3)

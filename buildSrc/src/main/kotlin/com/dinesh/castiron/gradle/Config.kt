@@ -22,7 +22,7 @@ object Config {
         const val UI_THEME = ":castiron-ui-theme"
 
         fun getNamespace(module: String): String {
-            return if (module == APP) App.APPLICATION_ID
+            return if (module == APP || ":$module" == APP) App.APPLICATION_ID
             else "$ROOT_NAMESPACE.${module.replace("-", ".")}"
         }
     }

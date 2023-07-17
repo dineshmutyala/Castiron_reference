@@ -12,7 +12,8 @@ dependencies {
 
     implementation (platform(Dependencies.Kotlin.BOM))
 
-    implementation (Dependencies.AndroidX.CORE)
+    implementation (Dependencies.AndroidX.Core.KTX)
+    implementation (Dependencies.AndroidX.Core.SPLASH_SCREEN)
     implementation (Dependencies.AndroidX.ACTIVITY)
 
     implementation (platform(Dependencies.AndroidX.Compose.BOM))
